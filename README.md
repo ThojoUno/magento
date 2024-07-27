@@ -45,3 +45,19 @@ bin/setup magento.test
 ```
 open https://magento.test
 ```
+
+rg-appsvcquickstart-eastus-dev-001
+
+**Azure CLI**
+```
+sudo su root
+curl -L https://aka.ms/InstallAzureCli | sudo bash
+```
+** Az Login and create ACR
+```
+az login --use-device-code
+rg="rg-appsvcquickstart-eastus-dev-001"
+az acr create --resource-group $rg --name appsvcquickstart01 --sku Basic
+# Login server: appsvcquickstart01.azurecr.io
+az acr login --name appsvcquickstart01
+```
