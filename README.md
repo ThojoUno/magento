@@ -1,6 +1,12 @@
 # magento
 https://github.com/markshust/docker-magento
 
+## Quickstart bootstrap
+```
+# bash bootstrap.sh [project] [domain]
+bash bootstrap.sh magento magento.test
+```
+
 ## New Project
 1. Create your project directory then go into it:
 ```
