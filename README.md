@@ -71,10 +71,40 @@ az acr login --name $acr
 ```
 
 ### Containers
- ✔ Container magento-mailcatcher-1  
- ✔ Container magento-app-1          
- ✔ Container magento-phpfpm-1       
- ✔ Container magento-db-1           
- ✔ Container magento-redis-1        
- ✔ Container magento-opensearch-1   
- ✔ Container magento-rabbitmq-1             
+REPOSITORY                      TAG          IMAGE ID       CREATED        SIZE
+linuxserver/phpmyadmin          latest       e16f5760c0a0   21 hours ago   137MB
+mariadb                         10.6         4cb983cc407c   6 weeks ago    396MB
+sj26/mailcatcher                latest       750c37a402e6   8 weeks ago    129MB
+redis                           7.2-alpine   97ed3031282d   2 months ago   40.7MB
+markoshust/magento-php          8.3-fpm-2    53a814ceeac4   3 months ago   1.3GB
+markoshust/magento-opensearch   2.12-0       24058d03b46e   3 months ago   1.29GB
+markoshust/magento-nginx        1.24-0       7c14fa38c2a5   3 months ago   52.6MB
+markoshust/magento-rabbitmq     3.12-0       06973223469a   3 months ago   175MB
+```
+docker tag 7c14fa38c2a5 $acr.azurecr.io/magento-nginx
+docker push $acr.azurecr.io/magento-nginx
+
+docker tag 53a814ceeac4 $acr.azurecr.io/magento-php:8.3-fpm-2
+docker push $acr.azurecr.io/magento-php:8.3-fpm-2
+
+docker tag 24058d03b46e $acr.azurecr.io/magento-opensearch:2.12-0
+docker push $acr.azurecr.io/magento-opensearch:2.12-0
+
+docker tag 4cb983cc407c $acr.azurecr.io/mariadb:10.6
+docker push $acr.azurecr.io/mariadb:10.6
+
+docker tag 97ed3031282d $acr.azurecr.io/redis:7.2-alphine
+docker push $acr.azurecr.io/redis:7.2-alphine
+
+docker tag e16f5760c0a0 $acr.azurecr.io/phpmyadmin
+docker push $acr.azurecr.io/phpmyadmin
+
+docker tag 06973223469a $acr.azurecr.io/magento-rabbitmq:3.12-0
+docker push $acr.azurecr.io/magento-rabbitmq:3.12-0
+
+docker tag 750c37a402e6 $acr.azurecr.io/mailcatcher
+docker push $acr.azurecr.io/mailcatcher
+
+```
+
+
