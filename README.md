@@ -63,9 +63,11 @@ curl -L https://aka.ms/InstallAzureCli | sudo bash
 ```
 az login --use-device-code
 rg="rg-appsvcquickstart-eastus-dev-001"
-az acr create --resource-group $rg --name appsvcquickstart01 --sku Basic
+acr="appsvcquickstart01"
+az acr create --resource-group $rg --name $acr --sku Basic
 # Login server: appsvcquickstart01.azurecr.io
-az acr login --name appsvcquickstart01
+az acr login --name $acr
+
 ```
 
 ### Containers
