@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 
-SITE="${1:=magento}"
-DOMAIN="${2:=magento.test}"
+SITE=${1:-magento}
+DOMAIN=${2:-magento.test}
 
 echo "Creating site (${SITE}) directory..."
 mkdir -p ~/Sites/${SITE}
