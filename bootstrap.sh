@@ -14,6 +14,6 @@ echo "Installing latest Magento community build..."
 bin/download 2.4.7 community
 
 echo "Run the setup installer for Magento with domain ${DOMAIN}..."
-bin/setup ${DOMAIN}
+bin/setup "${DOMAIN}"
 
-cd ~/Sites/${SITE}
+cd ~/Sites/"${SITE}"
