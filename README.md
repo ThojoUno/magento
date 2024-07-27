@@ -67,3 +67,12 @@ az acr create --resource-group $rg --name appsvcquickstart01 --sku Basic
 # Login server: appsvcquickstart01.azurecr.io
 az acr login --name appsvcquickstart01
 ```
+
+### Containers
+ ✔ Container magento-mailcatcher-1  
+ ✔ Container magento-app-1          
+ ✔ Container magento-phpfpm-1       
+ ✔ Container magento-db-1           
+ ✔ Container magento-redis-1        
+ ✔ Container magento-opensearch-1   
+ ✔ Container magento-rabbitmq-1             
