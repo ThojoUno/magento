@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 
 SITE=${1:-magento}
 DOMAIN=${2:-magento.test}
