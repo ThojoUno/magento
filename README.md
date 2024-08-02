@@ -105,6 +105,16 @@ docker push $acr.azurecr.io/magento-rabbitmq:3.12-0
 docker tag 750c37a402e6 $acr.azurecr.io/mailcatcher
 docker push $acr.azurecr.io/mailcatcher
 
+## Create new image from running container
+```
+docker ps -a
+docker commit <container id> bit-magento:latest
+docker images
+docker tag <image id> $ACR.azurecr.io/bit-magento
+docker push $ACR.azurecr.io/bit-magento
+```
+
+
 ```
 
 
