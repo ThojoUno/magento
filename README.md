@@ -81,6 +81,11 @@ markoshust/magento-opensearch   2.12-0       24058d03b46e   3 months ago   1.29G
 markoshust/magento-nginx        1.24-0       7c14fa38c2a5   3 months ago   52.6MB
 markoshust/magento-rabbitmq     3.12-0       06973223469a   3 months ago   175MB
 ```
+docker commit <container id> bn-magento:latest
+docker images
+docker tag <image id>
+
+
 docker tag 7c14fa38c2a5 $acr.azurecr.io/magento-nginx
 docker push $acr.azurecr.io/magento-nginx
 
