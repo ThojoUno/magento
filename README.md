@@ -120,6 +120,4 @@ docker push $ACR.azurecr.io/bit-magento
 ```
 
 
-```
-
 
